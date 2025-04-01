@@ -1,0 +1,187 @@
+.Body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* Full viewport size */
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+.LeftDiv {
+    width: 50%;
+    /* height: 100vh; */
+    padding: 5% 8% 5% 15%;
+    align-items: center;
+    text-align: left;
+}
+
+.Title1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: yellow;
+    margin-bottom: 0;
+}
+
+.Title2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(223, 45, 45);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.SelfDestruct {
+    font-weight: bold;
+    color: red;
+}
+
+.Objective {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.Buttons {
+    margin-top: 20px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.AcceptButton {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.BriefingButton {
+    background-color: grey;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.RightDiv {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5% 0 0;
+}
+
+.Img {
+    max-width: 100%;
+    max-height: 80vh;
+    padding-right: 10%;
+    border-radius: 10px;
+}
+
+.Points{
+    margin: 1px 0px 0px 1px;
+}
+
+.CountDown {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    font-size: 100px;
+    color: red;
+    font-weight: bold;
+}
+
+.BombTimer{
+    font-family: 'Digital', monospace;
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+.ExplosionCanvas{
+    position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1001;
+            pointer-events: none;
+
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Body {
+        flex-direction: column; /* Stack elements on top of each other */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .LeftDiv {
+        width: 90%;
+        height: auto;
+        padding: 5%;
+    }
+
+    .RightDiv {
+        width: 90%;
+        padding-top: 20px;
+    }
+
+    .Img {
+        max-width: 90%;
+        max-height: 50vh;
+        padding: 0;
+    }
+
+    .Buttons {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .AcceptButton, .BriefingButton {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .Title1 {
+        font-size: 1.5rem;
+    }
+
+    .Title2 {
+        font-size: 1.5rem;
+    }
+
+    .Objective {
+        font-size: 0.9rem;
+    }
+
+    .Img {
+        max-height: 40vh;
+    }
+
+    .Buttons {
+        width: 100%;
+    }
+}
