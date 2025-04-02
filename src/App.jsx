@@ -12,7 +12,6 @@ function App() {
 
   useEffect(() => {
     let interval;
-    console.log("useEffect Triggered")
     if (countdown && timer > 0) {
       interval = setInterval(() => {
         setTimer((prev) => prev - 10);
@@ -42,7 +41,9 @@ function App() {
 
   function handleTrailer(){
     setTimeout(() => {
-      window.location.href = "https://www.youtube.com/watch?v=NOhDyUmT9z0";
+
+      // window.location.href = "https://www.youtube.com/watch?v=NOhDyUmT9z0";
+      window.open("https://www.youtube.com/watch?v=NOhDyUmT9z0", "_blank");
     }, 100); 
   }
   
@@ -106,7 +107,6 @@ function App() {
       if (explosion.particles.length > 0) {
         requestAnimationFrame(animate);
       } else {
-        console.log("Reached redirection")
         // Ensure an immediate redirect once animation is fully done
         setTimeout(() => {
           window.location.href = redirectURL;
@@ -152,7 +152,7 @@ function App() {
         </div>
       </div>
       <div className={styles.RightDiv}>
-        <img src="/movie-day-website/main-pic.png" alt='Movie Poster' className={styles.Img}/>
+        <img src="/mi-invite-the-final-reckoning/main-pic.png" alt='Movie Poster' className={styles.Img}/>
       </div>
     </div>
   );
