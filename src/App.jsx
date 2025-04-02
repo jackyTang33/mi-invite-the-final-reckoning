@@ -152,7 +152,7 @@ function App() {
         </div>
       </div>
       <div className={styles.RightDiv}>
-        <img src='/main-pic.png' alt='Movie Poster' className={styles.Img}/>
+        <img src="/movie-day-website/main-pic.png" alt='Movie Poster' className={styles.Img}/>
       </div>
     </div>
   );
