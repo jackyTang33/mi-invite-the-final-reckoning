@@ -136,7 +136,7 @@ function App() {
       <canvas ref={canvasRef} className={styles.ExplosionCanvas}></canvas>
       
       <div className={styles.LeftDiv}>
-        <h1 className={styles.Title1}>MOVIE NIGHT</h1>
+        <h1 className={styles.Title1}>Blockbuster Evening</h1>
         <h2 className={styles.Title2}>Mission: Impossible - The Final Reckoning</h2>
         <p className={styles.SelfDestruct}>🔴 THIS MESSAGE WILL SELF-DESTRUCT...</p>
         <p>Your next mission, should you choose to accept it:</p>
