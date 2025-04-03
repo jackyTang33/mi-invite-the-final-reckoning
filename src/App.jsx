@@ -4,27 +4,50 @@ import styles from './App.module.css';
 function App() {
   const [countdown, setCountdown] = useState(false);
   // count down timer
-  const [timer, setTimer] = useState(3000);
+  const [timer, setTimer] = useState(4000);
   const [redirectURL, setRedirectURL] = useState(null);
   const [isAnimating, setAnimating] = useState(false);
   const canvasRef = useRef(null);
   const countdownRef = useRef(null);
 
-  useEffect(() => {
-    let interval;
-    if (countdown && timer > 0) {
-      interval = setInterval(() => {
-        setTimer((prev) => prev - 10);
-      }, 1);
-    } else if (countdown && timer <= 0) {
-      clearInterval(interval);
-      explode();
+  // useEffect(() => {
+  //   let interval;
+  //   if (countdown && timer > 0) {
+  //     interval = setInterval(() => {
+  //       setTimer((prev) => prev - 10);
+  //     }, 1);
+  //   } else if (countdown && timer <= 0) {
+  //     clearInterval(interval);
+  //     explode();
       
+  //   }
+  //   return () => {
+  //     clearInterval(interval)
+  //   };
+  // }, [countdown, timer]);
+
+  useEffect(() => {
+    if (!countdown) return;
+  
+    const startTime = Date.now();
+    const endTime = startTime + timer; // 3 seconds
+  
+    function updateTimer() {
+      const remainingTime = endTime - Date.now();
+      setTimer(Math.max(remainingTime, 0));
+  
+      if (remainingTime > 0) {
+        requestAnimationFrame(updateTimer);
+      } else {
+        explode();
+      }
     }
-    return () => {
-      clearInterval(interval)
-    };
-  }, [countdown, timer]);
+  
+    updateTimer(); // Start animation loop
+  
+    return () => setTimer(3000); // Reset when unmounted
+  }, [countdown]);
+  
 
   function formatTime(ms) {
     const minutes = Math.floor(ms / 60000);
@@ -43,7 +66,7 @@ function App() {
     setTimeout(() => {
 
       // window.location.href = "https://www.youtube.com/watch?v=NOhDyUmT9z0";
-      window.open("https://www.youtube.com/watch?v=NOhDyUmT9z0", "_blank");
+      window.open("https://www.youtube.com/watch_popup?v=NOhDyUmT9z0&autoplay=1", "_blank");
     }, 100); 
   }
   
