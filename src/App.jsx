@@ -36,7 +36,7 @@ function App() {
   function handleAccept() {
     setCountdown(true);
     setTimer(timer);
-    setRedirectURL("https://google.com");
+    setRedirectURL("https://forms.office.com/e/JBWfVvtDsc");
   }
 
   function handleTrailer(){
