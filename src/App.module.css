@@ -23,6 +23,8 @@
     font-weight: bold;
     color: yellow;
     margin-bottom: 0;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Ensures no overflow issues */
 }
 
 .Title2 {
@@ -127,6 +129,22 @@
 
 
 /* Responsive Design */
+@media (max-width: 1000px){
+    .Title1 {
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (max-width: 850px){
+    .Title1 {
+        font-size: 2.1rem;
+    }
+
+}
+
+
+
 @media (max-width: 768px) {
     .Body {
         flex-direction: column; /* Stack elements on top of each other */
@@ -139,6 +157,10 @@
         width: 90%;
         height: auto;
         padding: 5%;
+    }
+
+    .Title1 {
+        font-size: 2rem;
     }
 
     .RightDiv {

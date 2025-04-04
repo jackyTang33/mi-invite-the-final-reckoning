@@ -30,8 +30,7 @@ function App() {
     if (!countdown) return;
   
     const startTime = Date.now();
-    const endTime = startTime + timer; // 3 seconds
-  
+    const endTime = startTime + timer; 
     function updateTimer() {
       const remainingTime = endTime - Date.now();
       setTimer(Math.max(remainingTime, 0));
