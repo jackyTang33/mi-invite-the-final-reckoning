@@ -163,8 +163,8 @@ function App() {
         <p className={styles.SelfDestruct}>🔴 THIS MESSAGE WILL SELF-DESTRUCT...</p>
         <p>Your next mission, should you choose to accept it:</p>
         <p className={styles.Points}><strong>Date:</strong> 22nd May 2025</p>
-        <p className={styles.Points}><strong>Time:</strong> 20:00</p>
-        <p className={styles.Points}><strong>Location:</strong> Sunway Velocity Mall</p>
+        {/* <p className={styles.Points}><strong>Time:</strong> 20:00</p> */}
+        <p className={styles.Points}><strong>Location:</strong> TGV @ Sunway Velocity Mall</p>
         <p className={styles.Points}><strong>Extraction Points:</strong> MRT Maluri/MRT Cochrane</p>
         <p className={styles.Objective}>Your objective: Infiltrate the cinema, rendezvous with fellow agents, and immerse yourself in an action-packed night. Intel confirms that popcorn and drinks will be provided—no need to smuggle in supplies.</p>
         <p>📄 Your briefing (trailer) is just one click away.</p>
